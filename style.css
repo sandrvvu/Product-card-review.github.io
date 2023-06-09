@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10px;
+    background-color: var(--cream);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: 686px;
+    background-color: var(--white);
+}
+
+
+img {
+    flex: 1 0 50%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+   }
+
+.card-component {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--dark-grayish-blue);
+}
+
+.card-name{
+    line-height: 0.9;
+    font-size: 2.5rem;
+    color: var(--very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.card-category {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.card-description {
+    line-height: 1.6em;
+}
+
+.card-price{
+    display: flex;
+    align-items: center;
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+}
+
+.current-price{
+    font-size: 2rem;
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    padding-right: 25px;
+}
+
+.old-price{
+    text-decoration: line-through;
+}
+
+button.card-button {
+    background-color:  var(--dark-cyan);
+    font-weight: 700;
+    color: var(--white);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.card-button:hover {
+    background-color: hsl(158, 45%, 20%);
+}
+
+button:active {
+    background-color: hsl(158, 45%, 20%);
+}
+
+.card-button img {
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 600px){
+    .content {
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .card-name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-price {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+       }
+}
+
